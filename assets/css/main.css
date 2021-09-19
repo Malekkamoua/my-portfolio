@@ -116,6 +116,10 @@ h2 {
 	margin:  0
 }
 
+.about--banner-head {
+    position: relative;
+    top: 50px;
+}
 mark {
 	background: #ff0;
 	color: #000
@@ -1251,26 +1255,27 @@ body {
 
 .about--options>a {
 	position: relative;
-	width: 150px;
-	height: 75px;
+    top: -50px;
+	width: 200px;
+	height: 100px;
+    margin: 2%;
 	text-decoration: none;
 	color: #fff;
-	border: 10px solid #0f33ff;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat
 }
 
 .about--options>a:nth-child(1) {
-	background-image: url("../img/about-winners.jpg")
+	background-image: url("../img/Gameworld.png");
 }
 
 .about--options>a:nth-child(2) {
-	background-image: url("../img/about-philosophy.jpg")
+	background-image: url("../img/soldes.png")
 }
 
 .about--options>a:nth-child(3) {
-	background-image: url("../img/about-history.jpg")
+	background-image: url("../img/mascotte-Winek.png")
 }
 
 .about--options>a:hover h3 {
@@ -1357,7 +1362,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("../img/contact-visual.png");
+	background-image: url("../img/map.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat
@@ -1434,7 +1439,7 @@ body {
 }
 
 .contact--lockup .modal--options li:nth-child(2) {
-	background-color: #ea4c89
+	background-color: #0a66c2
 }
 
 .contact--lockup .modal--options li:nth-child(3) {
