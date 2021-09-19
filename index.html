@@ -103,8 +103,7 @@
                           <img src="assets/img/slide.png" alt="Victory">
                         </div>
                         <p class="slider--item-title">ASSAD BATTERY</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
+                        <p class="slider--item-description">Digital Design For Social media Of Assad.</p>
                       </a>
                     </li>
                     <li class="slider--item slider--item-center">
@@ -204,7 +203,7 @@
                 <form class="work-request" method="post" action="https://usebasin.com/f/d8efb66672c8" id="email">
                   <div class="work-request--options">
                     <span class="options-a">
-                      <input id="opt-1" type="checkbox" value="app design">
+                      <input id="opt-1" type="checkbox" value="app design" name="subject 1">
                       <label for="opt-1">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -216,7 +215,7 @@
                         </svg>
                         Digital Design
                       </label>
-                      <input id="opt-2" type="checkbox" value="graphic design">
+                      <input id="opt-2" type="checkbox" value="graphic design" name="subject 2">
                       <label for="opt-2">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -228,7 +227,7 @@
                         </svg>
                         Logo Design
                       </label>
-                      <input id="opt-3" type="checkbox" value="motion design">
+                      <input id="opt-3" type="checkbox" value="motion design" name="subject 3">
                       <label for="opt-3">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -242,7 +241,7 @@
                       </label>
                     </span>
                     <span class="options-b">
-                      <input id="opt-4" type="checkbox" value="ux design">
+                      <input id="opt-4" type="checkbox" value="ux design" name="subject 4">
                       <label for="opt-4">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -254,7 +253,8 @@
                         </svg>
                         Storyboard
                       </label>
-                      <input id="opt-5" type="checkbox" value="webdesign">
+
+                      <input id="opt-5" type="checkbox" value="webdesign" name="subject 5">
                       <label for="opt-5">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -266,7 +266,8 @@
                         </svg>
                         Webdesign
                       </label>
-                      <input name="Subject" id="InputSubj" type="checkbox" value="marketing">
+
+                      <input id="opt-6" type="checkbox" value="3D" name="subject 6">
                       <label for="opt-6">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -278,6 +279,7 @@
                         </svg>
                         3D
                       </label>
+
                     </span>
                   </div>
                   <div class="work-request--information">
@@ -319,6 +321,11 @@
       var url = form.attr('action');
 
       console.log(form.serialize());
+      /*subjects = []
+      $.each($("input[name='fruits']:checked"), function (K, V) {
+        fruitArray.push(V.value);
+      });*/
+
       $.ajax({
         type: "POST",
         url: url,
