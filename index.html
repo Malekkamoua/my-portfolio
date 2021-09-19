@@ -47,7 +47,7 @@
               <li><span>Works</span></li>
               <li><span>About</span></li>
               <li><span>Contact</span></li>
-              <li><span>HIRE ME</span></li>
+              <li><span>Hire me</span></li>
             </ul>
           </nav>
           <ul class="l-main-content main-content">
@@ -285,11 +285,11 @@
                   </div>
                   <div class="work-request--information">
                     <div class="information-name">
-                      <input name="Name" id="InputName" type="text" spellcheck="false">
+                      <input name="Name" id="InputName" type="text" spellcheck="false" required>
                       <label for="name">Name</label>
                     </div>
                     <div class="information-email">
-                      <input type="email" spellcheck="false" name="Email" id="InputEmail">
+                      <input type="email" spellcheck="false" name="Email" id="InputEmail" required>
                       <label for="email">Email</label>
                     </div>
                   </div>
@@ -321,22 +321,20 @@
       var form = $(this);
       var url = form.attr('action');
 
-      console.log(form.serialize());
-      /*subjects = []
-      $.each($("input[name='fruits']:checked"), function (K, V) {
-        fruitArray.push(V.value);
-      });*/
-
-      $.ajax({
-        type: "POST",
-        url: url,
-        data: form.serialize(), // serializes the form's elements.
-        success: function (data) {
-          alert(
-            "Email sent with success, we will contact you soon :)"); // show response from the php script.
-        }
-      });
-
+      if ($('#email :checkbox:checked').length > 0) {
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: form.serialize(), // serializes the form's elements.
+          success: function (data) {
+            alert(
+              "Email sent with success, we will contact you soon :)"); // show response from the php script.
+          }
+        });
+      }
+      else {
+        alert("You need to check at least one subject")
+      }
 
     });
   </script>
